@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj": {}
+    "c:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj": {
+    "c:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj",
+        "projectUniqueName": "c:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj",
         "projectName": "BlazorTest",
-        "projectPath": "C:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj",
+        "projectPath": "c:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj",
         "packagesPath": "C:\\Users\\crgar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crgar\\work\\SeaSharp\\obj\\",
+        "outputPath": "c:\\Users\\crgar\\work\\SeaSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\crgar\\AppData\\Roaming\\NuGet\\NuGet.Config"
