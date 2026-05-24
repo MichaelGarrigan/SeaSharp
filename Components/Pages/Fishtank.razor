@@ -1,0 +1,71 @@
+@page "/fishtank"
+
+<div class="game-main">
+    <section class="tank-container">
+        <div class="tank">
+            <div class="fish" style="left:@FishXpx; top:@FishYpx;"></div>
+        </div>
+    </section>
+
+    <section class="info-panel">
+        <h2>Fish Tank Game</h2>
+        <p>Use the arrow keys to move the fish around the tank.</p>
+        <p>Position: (@FishX, @FishY)</p>
+    </section>
+</div>
+
+@code {
+    private int TankWidth = 800;
+    private int TankHeight = 400;
+
+    private int FishWidth = 50;
+    private int FishHeight = 30;
+
+    private int FishX = 100;
+    private int FishY = 100;
+
+    private string FishXpx => $"{FishX}px";
+    private string FishYpx => $"{FishY}px";
+
+    protected override void OnInitialized()
+    {
+        // Start centered-ish
+        FishX = (TankWidth - FishWidth) / 2;
+        FishY = (TankHeight - FishHeight) / 2;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Register JS key handler
+            _ = JS.InvokeVoidAsync("fishtank.registerKeyHandler");
+        }
+    }
+
+    [Inject] private IJSRuntime JS { get; set; } = default!;
+
+    [JSInvokable]
+    public void MoveFish(string direction)
+    {
+        const int step = 10;
+
+        switch (direction)
+        {
+            case "ArrowUp":
+                FishY = Math.Max(0, FishY - step);
+                break;
+            case "ArrowDown":
+                FishY = Math.Min(TankHeight - FishHeight, FishY + step);
+                break;
+            case "ArrowLeft":
+                FishX = Math.Max(0, FishX - step);
+                break;
+            case "ArrowRight":
+                FishX = Math.Min(TankWidth - FishWidth, FishX + step);
+                break;
+        }
+
+        InvokeAsync(StateHasChanged);
+    }
+}

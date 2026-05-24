@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wNZfRi4YLfk=",
+  "dgSpecHash": "IPKBWWjdHNM=",
   "success": true,
-  "projectFilePath": "c:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj",
+  "projectFilePath": "C:\\Users\\crgar\\work\\SeaSharp\\BlazorTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\crgar\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.8\\microsoft.aspnetcore.app.internal.assets.10.0.8.nupkg.sha512"
   ],
