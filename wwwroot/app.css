@@ -58,3 +58,71 @@ h1:focus {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
     text-align: start;
 }
+
+/* Fishtank game */
+.game-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.tank-container {
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tank {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: linear-gradient(#7fd3ff, #004f7a);
+    border: 6px solid #2b4c5a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.fish {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background: orange;
+    border-radius: 50% 60% 60% 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Simple tail and eye using pseudo-elements */
+.fish::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: orange;
+    border-radius: 0 50% 50% 0;
+    transform: rotate(30deg);
+}
+
+.fish::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 2px 0 0 0 black;
+}
+
+.info-panel {
+    flex: 0 0 30%;
+    padding: 1rem 2rem;
+    background: #f5f7fa;
+    border-top: 1px solid #d0d4dc;
+}
